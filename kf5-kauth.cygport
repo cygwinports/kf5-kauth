@@ -1,0 +1,30 @@
+inherit kf5
+
+NAME="kf5-kauth"
+VERSION=5.9.0
+RELEASE=1
+CATEGORY="Libs"
+SUMMARY="KDE 5 user authentication library"
+DESCRIPTION="KAuth provides a convenient, system-integrated way to offload
+actions that need to be performed as a privileged user to small (hopefully
+secure) helper utilities."
+
+CYGCMAKE_ARGS="-DKAUTH_BACKEND_NAME=Fake"
+
+PKG_NAMES="libKF5Auth5 libKF5Auth-devel"
+libKF5Auth5_CONTENTS="
+	etc/dbus-1/
+	usr/bin/cygKF5Auth-5.dll
+	${QT5_PLUGINSDIR#/}/kauth/
+	usr/share/doc/
+	usr/share/kf5/kauth/
+	usr/share/locale/
+"
+libKF5Auth_devel_REQUIRES="libKF5CoreAddons-devel libQt5Core-devel"
+libKF5Auth_devel_CONTENTS="
+	usr/include/KF5/KAuth/
+	usr/include/KF5/kauth_version.h
+	usr/lib/cmake/KF5Auth/
+	${QT5_MKSPECSDIR#/}/modules/qt_KAuth.pri
+	usr/lib/libKF5Auth.dll.a
+"
