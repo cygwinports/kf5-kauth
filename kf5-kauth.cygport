@@ -9,6 +9,8 @@ DESCRIPTION="KAuth provides a convenient, system-integrated way to offload
 actions that need to be performed as a privileged user to small (hopefully
 secure) helper utilities."
 
+PATCH_URI="5.12.0-fix-build-fake-backend.patch"
+
 CYGCMAKE_ARGS="-DKAUTH_BACKEND_NAME=Fake"
 
 PKG_NAMES="libKF5Auth5 libKF5Auth-devel"
