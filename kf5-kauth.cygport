@@ -1,15 +1,13 @@
 inherit kf5
 
 NAME="kf5-kauth"
-VERSION=5.12.0
+VERSION=5.27.0
 RELEASE=1
 CATEGORY="Libs"
 SUMMARY="KDE 5 user authentication library"
 DESCRIPTION="KAuth provides a convenient, system-integrated way to offload
 actions that need to be performed as a privileged user to small (hopefully
 secure) helper utilities."
-
-PATCH_URI="5.12.0-fix-build-fake-backend.patch"
 
 CYGCMAKE_ARGS="-DKAUTH_BACKEND_NAME=Fake"
 
