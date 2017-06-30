@@ -1,7 +1,7 @@
 inherit kf5
 
 NAME="kf5-kauth"
-VERSION=5.27.0
+VERSION=5.35.0
 RELEASE=1
 CATEGORY="Libs"
 SUMMARY="KDE 5 user authentication library"
@@ -28,3 +28,6 @@ libKF5Auth_devel_CONTENTS="
 	${QT5_MKSPECSDIR#/}/modules/qt_KAuth.pri
 	usr/lib/libKF5Auth.dll.a
 "
+
+# depends on kcoreaddons.sip
+CYGCMAKE_ARGS="-DGBP_SIP_COMMAND=NOTFOUND"
