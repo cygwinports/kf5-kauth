@@ -1,7 +1,7 @@
 inherit kf5
 
 NAME="kf5-kauth"
-VERSION=5.39.0
+VERSION=5.43.0
 RELEASE=1
 CATEGORY="Libs"
 SUMMARY="KDE 5 user authentication library"
@@ -14,6 +14,7 @@ CYGCMAKE_ARGS="-DKAUTH_BACKEND_NAME=Fake"
 PKG_NAMES="libKF5Auth5 libKF5Auth-devel"
 libKF5Auth5_CONTENTS="
 	etc/dbus-1/
+	etc/xdg/kauth.categories
 	usr/bin/cygKF5Auth-5.dll
 	${QT5_PLUGINSDIR#/}/kauth/
 	usr/share/doc/
